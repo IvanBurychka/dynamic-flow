@@ -3,6 +3,7 @@ import promptSync from 'prompt-sync';
 import sift from "sift";
 
 const prompt = promptSync();
+const body = {};
 
 const start = async () => {
 	let next = null;
@@ -17,11 +18,15 @@ const start = async () => {
 			const test = sift(ans.condition);
 			if (test(answer)) {
 				currentStep = flow.steps[ans.nextStep];
+				if (currentStep.bodyPath ) {
+					body[currentStep.bodyPath] = answer;
+				}
 				break;
 			}
 		}
 		count++;
 	} while (!currentStep.submit && count < 5)
+	console.log(body);
 }
 
 start();

@@ -4,6 +4,7 @@ export const flow = {
 			name: 'step #1',
 			question: 'type a or b',
 			answer: null,
+			bodyPath: 'step1',
 			next: {
 				answers: [
 					{
@@ -21,6 +22,7 @@ export const flow = {
 			name: 'step #2',
 			question: 'andy or bob',
 			answer: null,
+			bodyPath: 'step2',
 			next: {
 				answers: [
 					{
@@ -38,6 +40,7 @@ export const flow = {
 			name: 'pet',
 			question: 'name cat or dog',
 			answer: null,
+			bodyPath: 'step3',
 			next: {
 				answers: [
 					{
@@ -55,6 +58,7 @@ export const flow = {
 			name: 'step #4',
 			question: 'if finish - type: 5',
 			answer: null,
+			bodyPath: 'step4',
 			next: {
 				answers: [
 					{
